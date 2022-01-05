@@ -1,0 +1,17 @@
+[user]
+  name = xxx
+  email = xxx
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h -%C(yellow)%d %C(bold blue)<%an> %Cgreen(%cd)%Creset - %s %Creset' --abbrev-commit --date=local
+  lgg = log -g --color --pretty=format:'%Cred%h -%C(yellow)%d %C(bold blue)<%an> %Cgreen(%cd)%Creset - %s %Creset' --abbrev-commit --date=local
+  up-to-date = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  ap = add --patch
+  prstash = "!f() { git fetch $1 refs/pull-requests/$2/from:$3; } ; f"
+[pull]
+  ff = only
