@@ -1,2 +1,2 @@
-# git-config
-personal git global config includes some alias.
+# user-preference
+- .gitconfig is my personal git config includes some alias.
